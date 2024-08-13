@@ -17,7 +17,22 @@ List<String> categories = [
 List<Widget> numbers = [
   Column(
     children: [
-      for (int i = 0; i < categories.length; i++) Card(),
+      for (int i = 0; i < categories.length; i++)
+        SizedBox(
+          height: 200,
+          width: 400,
+          child: Card(
+            surfaceTintColor: Colors.blueGrey,
+            child: Center(
+              child: Text(
+                'categories[i]',
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
+            ),
+          ),
+        ),
     ],
   ),
 ];
