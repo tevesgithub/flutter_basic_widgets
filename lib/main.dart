@@ -15,12 +15,12 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('This'),
-              Text('is'),
-              Text('a'),
-              Text('row.'),
+              FlutterLogo(size: 40),
+              SizedBox(width: 100),
+              Icon(Icons.notifications, size: 30, color: Colors.white),
+              Icon(Icons.search, size: 30, color: Colors.white),
             ],
           ),
         ),
@@ -29,56 +29,6 @@ class MainApp extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return numbers[index];
           },
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: const [
-              DrawerHeader(
-                child: Text('Header'),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-              ),
-              ListTile(
-                title: Text('Item 1'),
-                onTap: null,
-              ),
-              ListTile(
-                title: Text('Item 2'),
-                onTap: null,
-              ),
-              ListTile(
-                title: Text('Item 3'),
-                onTap: null,
-              ),
-              ListTile(
-                title: Text('Item 4'),
-                onTap: null,
-              ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: const BottomAppBar(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                iconSize: 30,
-                icon: Icon(Icons.home),
-                onPressed: null,
-              ),
-              IconButton(
-                iconSize: 30,
-                icon: Icon(Icons.settings),
-                onPressed: null,
-              ),
-              IconButton(
-                iconSize: 30,
-                icon: Icon(Icons.person),
-                onPressed: null,
-              ),
-            ],
-          ),
         ),
       ),
     );
